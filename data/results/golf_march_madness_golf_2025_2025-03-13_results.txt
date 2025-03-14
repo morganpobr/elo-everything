@@ -1,9 +1,0 @@
-Competition: March Madness Golf 2025
-Type: golf
-Date: 2025-03-13
-Rankings:
-1. Tiger Woods (Score: 68)
-2. Rory McIlroy (Score: 69)
-2. Jordan Spieth (Score: 69)
-4. Dustin Johnson (Score: 70)
-5. Brooks Koepka (Score: 72)
