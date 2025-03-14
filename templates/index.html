@@ -52,7 +52,6 @@
                         <th>Rank</th>
                         <th>Player</th>
                         <th>Rating</th>
-                        <th>Rating Change</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -61,18 +60,6 @@
                         <td>{{ loop.index }}</td>
                         <td>{{ player_name }}</td>
                         <td>{{ current_rating }}</td>
-                        <td>
-                            {% set history = player_history(player_name, competition_type) %}
-                            {% if history %}
-                                {% set prev_rating = history[-1]['new_rating'] if history|length > 0 else current_rating %}
-                                {% set change = current_rating - prev_rating %}
-                                <span class="{% if change > 0 %}text-success{% elif change < 0 %}text-danger{% endif %}">
-                                    {% if change > 0 %}+{% endif %}{{ change }}
-                                </span>
-                            {% else %}
-                                <span class="text-muted">New</span>
-                            {% endif %}
-                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>

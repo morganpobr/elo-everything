@@ -2,29 +2,19 @@
   {
     "name": "Tiger Woods",
     "ratings": {
-      "golf": 1559
+      "golf": 1627
     },
     "competition_history": {
       "golf": [
         {
           "competition_id": "golf_march_madness_golf_2025_2025-03-13",
           "date": "2025-03-13",
-          "new_rating": 1516
-        },
-        {
-          "competition_id": "golf_march_madness_golf_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1531
+          "new_rating": 1564
         },
         {
           "competition_id": "golf_after_march_madness_golf_2025_2025-03-20",
           "date": "2025-03-20",
-          "new_rating": 1546
-        },
-        {
-          "competition_id": "golf_after_march_madness_golf_2025_2025-03-20",
-          "date": "2025-03-20",
-          "new_rating": 1559
+          "new_rating": 1627
         }
       ]
     }
@@ -32,7 +22,7 @@
   {
     "name": "Rory McIlroy",
     "ratings": {
-      "golf": 1559
+      "golf": 1543
     },
     "competition_history": {
       "golf": [
@@ -42,19 +32,9 @@
           "new_rating": 1516
         },
         {
-          "competition_id": "golf_march_madness_golf_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1531
-        },
-        {
           "competition_id": "golf_after_march_madness_golf_2025_2025-03-20",
           "date": "2025-03-20",
-          "new_rating": 1546
-        },
-        {
-          "competition_id": "golf_after_march_madness_golf_2025_2025-03-20",
-          "date": "2025-03-20",
-          "new_rating": 1559
+          "new_rating": 1543
         }
       ]
     }
@@ -62,7 +42,7 @@
   {
     "name": "Jordan Spieth",
     "ratings": {
-      "golf": 1559
+      "golf": 1543
     },
     "competition_history": {
       "golf": [
@@ -72,19 +52,9 @@
           "new_rating": 1516
         },
         {
-          "competition_id": "golf_march_madness_golf_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1531
-        },
-        {
           "competition_id": "golf_after_march_madness_golf_2025_2025-03-20",
           "date": "2025-03-20",
-          "new_rating": 1546
-        },
-        {
-          "competition_id": "golf_after_march_madness_golf_2025_2025-03-20",
-          "date": "2025-03-20",
-          "new_rating": 1559
+          "new_rating": 1543
         }
       ]
     }
@@ -92,29 +62,19 @@
   {
     "name": "Dustin Johnson",
     "ratings": {
-      "golf": 1559
+      "golf": 1460
     },
     "competition_history": {
       "golf": [
         {
           "competition_id": "golf_march_madness_golf_2025_2025-03-13",
           "date": "2025-03-13",
-          "new_rating": 1516
-        },
-        {
-          "competition_id": "golf_march_madness_golf_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1531
+          "new_rating": 1468
         },
         {
           "competition_id": "golf_after_march_madness_golf_2025_2025-03-20",
           "date": "2025-03-20",
-          "new_rating": 1546
-        },
-        {
-          "competition_id": "golf_after_march_madness_golf_2025_2025-03-20",
-          "date": "2025-03-20",
-          "new_rating": 1559
+          "new_rating": 1460
         }
       ]
     }
@@ -122,29 +82,19 @@
   {
     "name": "Brooks Koepka",
     "ratings": {
-      "golf": 1502
+      "golf": 1406
     },
     "competition_history": {
       "golf": [
         {
           "competition_id": "golf_march_madness_golf_2025_2025-03-13",
           "date": "2025-03-13",
-          "new_rating": 1484
-        },
-        {
-          "competition_id": "golf_march_madness_golf_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1469
+          "new_rating": 1436
         },
         {
           "competition_id": "golf_after_march_madness_golf_2025_2025-03-20",
           "date": "2025-03-20",
-          "new_rating": 1486
-        },
-        {
-          "competition_id": "golf_after_march_madness_golf_2025_2025-03-20",
-          "date": "2025-03-20",
-          "new_rating": 1502
+          "new_rating": 1406
         }
       ]
     }
@@ -160,21 +110,6 @@
           "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
           "date": "2025-03-13",
           "new_rating": 1500
-        },
-        {
-          "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1500
-        },
-        {
-          "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1500
-        },
-        {
-          "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1500
         }
       ]
     }
@@ -182,7 +117,7 @@
   {
     "name": "Wesley So",
     "ratings": {
-      "chess": 1444
+      "chess": 1484
     },
     "competition_history": {
       "chess": [
@@ -190,21 +125,6 @@
           "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
           "date": "2025-03-13",
           "new_rating": 1484
-        },
-        {
-          "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1469
-        },
-        {
-          "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1456
-        },
-        {
-          "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1444
         }
       ]
     }
@@ -212,7 +132,7 @@
   {
     "name": "Magnus Carlsen",
     "ratings": {
-      "chess": 1556
+      "chess": 1516
     },
     "competition_history": {
       "chess": [
@@ -220,21 +140,6 @@
           "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
           "date": "2025-03-13",
           "new_rating": 1516
-        },
-        {
-          "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1531
-        },
-        {
-          "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1544
-        },
-        {
-          "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1556
         }
       ]
     }
@@ -250,21 +155,6 @@
           "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
           "date": "2025-03-13",
           "new_rating": 1500
-        },
-        {
-          "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1500
-        },
-        {
-          "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1500
-        },
-        {
-          "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
-          "date": "2025-03-13",
-          "new_rating": 1500
         }
       ]
     }
@@ -272,32 +162,45 @@
   {
     "name": "Morgan O'Brien",
     "ratings": {
-      "golf": 1467,
-      "amateur_golf": 1453
+      "golf": 1421,
+      "amateur_golf": 1397,
+      "archery": 1468
     },
     "competition_history": {
       "golf": [
         {
           "competition_id": "golf_after_march_madness_golf_2025_2025-03-20",
           "date": "2025-03-20",
-          "new_rating": 1483
-        },
-        {
-          "competition_id": "golf_after_march_madness_golf_2025_2025-03-20",
-          "date": "2025-03-20",
-          "new_rating": 1467
+          "new_rating": 1421
         }
       ],
       "amateur_golf": [
         {
-          "competition_id": "amateur_golf_erie_beach_classic_2025-03-23",
-          "date": "2025-03-23",
-          "new_rating": 1484
+          "competition_id": "amateur_golf_mens_league_2_2025-03-12",
+          "date": "2025-03-12",
+          "new_rating": 1468
+        },
+        {
+          "competition_id": "amateur_golf_agolf_touney_1_2025-03-18",
+          "date": "2025-03-18",
+          "new_rating": 1396
         },
         {
           "competition_id": "amateur_golf_erie_beach_classic_2_2025-03-20",
           "date": "2025-03-20",
-          "new_rating": 1453
+          "new_rating": 1380
+        },
+        {
+          "competition_id": "amateur_golf_erie_beach_classic_2025-03-23",
+          "date": "2025-03-23",
+          "new_rating": 1397
+        }
+      ],
+      "archery": [
+        {
+          "competition_id": "archery_archery_championship_2022_2022-02-08",
+          "date": "2022-02-08",
+          "new_rating": 1468
         }
       ]
     }
@@ -305,19 +208,24 @@
   {
     "name": "Owen Dorssers",
     "ratings": {
-      "amateur_golf": 1517
+      "amateur_golf": 1538
     },
     "competition_history": {
       "amateur_golf": [
         {
-          "competition_id": "amateur_golf_erie_beach_classic_2025-03-23",
-          "date": "2025-03-23",
-          "new_rating": 1484
+          "competition_id": "amateur_golf_agolf_touney_1_2025-03-18",
+          "date": "2025-03-18",
+          "new_rating": 1549
         },
         {
           "competition_id": "amateur_golf_erie_beach_classic_2_2025-03-20",
           "date": "2025-03-20",
-          "new_rating": 1517
+          "new_rating": 1577
+        },
+        {
+          "competition_id": "amateur_golf_erie_beach_classic_2025-03-23",
+          "date": "2025-03-23",
+          "new_rating": 1538
         }
       ]
     }
@@ -325,19 +233,189 @@
   {
     "name": "Finley O'Brien",
     "ratings": {
-      "amateur_golf": 1514
+      "amateur_golf": 1625
     },
     "competition_history": {
       "amateur_golf": [
         {
-          "competition_id": "amateur_golf_erie_beach_classic_2025-03-23",
-          "date": "2025-03-23",
-          "new_rating": 1516
+          "competition_id": "amateur_golf_mens_league_2_2025-03-12",
+          "date": "2025-03-12",
+          "new_rating": 1548
+        },
+        {
+          "competition_id": "amateur_golf_agolf_touney_1_2025-03-18",
+          "date": "2025-03-18",
+          "new_rating": 1615
         },
         {
           "competition_id": "amateur_golf_erie_beach_classic_2_2025-03-20",
           "date": "2025-03-20",
-          "new_rating": 1514
+          "new_rating": 1603
+        },
+        {
+          "competition_id": "amateur_golf_erie_beach_classic_2025-03-23",
+          "date": "2025-03-23",
+          "new_rating": 1625
+        }
+      ]
+    }
+  },
+  {
+    "name": "Mariah Kaak",
+    "ratings": {
+      "archery": 1532
+    },
+    "competition_history": {
+      "archery": [
+        {
+          "competition_id": "archery_archery_championship_2022_2022-02-08",
+          "date": "2022-02-08",
+          "new_rating": 1532
+        }
+      ]
+    }
+  },
+  {
+    "name": "Joey Bozo",
+    "ratings": {
+      "archery": 1500
+    },
+    "competition_history": {
+      "archery": [
+        {
+          "competition_id": "archery_archery_championship_2022_2022-02-08",
+          "date": "2022-02-08",
+          "new_rating": 1500
+        }
+      ]
+    }
+  },
+  {
+    "name": "Charles Heath",
+    "ratings": {
+      "amateur_golf": 1527
+    },
+    "competition_history": {
+      "amateur_golf": [
+        {
+          "competition_id": "amateur_golf_mens_league_2_2025-03-12",
+          "date": "2025-03-12",
+          "new_rating": 1516
+        },
+        {
+          "competition_id": "amateur_golf_agolf_touney_1_2025-03-18",
+          "date": "2025-03-18",
+          "new_rating": 1527
+        }
+      ]
+    }
+  },
+  {
+    "name": "Patrick O'Brien",
+    "ratings": {
+      "amateur_golf": 1460
+    },
+    "competition_history": {
+      "amateur_golf": [
+        {
+          "competition_id": "amateur_golf_mens_league_2_2025-03-12",
+          "date": "2025-03-12",
+          "new_rating": 1468
+        },
+        {
+          "competition_id": "amateur_golf_agolf_touney_1_2025-03-18",
+          "date": "2025-03-18",
+          "new_rating": 1460
+        }
+      ]
+    }
+  },
+  {
+    "name": "Jack Burke",
+    "ratings": {
+      "amateur_golf": 1453
+    },
+    "competition_history": {
+      "amateur_golf": [
+        {
+          "competition_id": "amateur_golf_agolf_touney_1_2025-03-18",
+          "date": "2025-03-18",
+          "new_rating": 1453
+        }
+      ]
+    }
+  },
+  {
+    "name": "mo",
+    "ratings": {
+      "testing": 1575
+    },
+    "competition_history": {
+      "testing": [
+        {
+          "competition_id": "testing_test_one_2025-03-02",
+          "date": "2025-03-02",
+          "new_rating": 1532
+        },
+        {
+          "competition_id": "testing_test_two_2025-03-03",
+          "date": "2025-03-03",
+          "new_rating": 1575
+        }
+      ]
+    }
+  },
+  {
+    "name": "finn",
+    "ratings": {
+      "testing": 1516
+    },
+    "competition_history": {
+      "testing": [
+        {
+          "competition_id": "testing_test_one_2025-03-02",
+          "date": "2025-03-02",
+          "new_rating": 1500
+        },
+        {
+          "competition_id": "testing_test_two_2025-03-03",
+          "date": "2025-03-03",
+          "new_rating": 1516
+        }
+      ]
+    }
+  },
+  {
+    "name": "pat",
+    "ratings": {
+      "testing": 1457
+    },
+    "competition_history": {
+      "testing": [
+        {
+          "competition_id": "testing_test_one_2025-03-02",
+          "date": "2025-03-02",
+          "new_rating": 1468
+        },
+        {
+          "competition_id": "testing_test_two_2025-03-03",
+          "date": "2025-03-03",
+          "new_rating": 1457
+        }
+      ]
+    }
+  },
+  {
+    "name": "jo",
+    "ratings": {
+      "testing": 1452
+    },
+    "competition_history": {
+      "testing": [
+        {
+          "competition_id": "testing_test_two_2025-03-03",
+          "date": "2025-03-03",
+          "new_rating": 1452
         }
       ]
     }

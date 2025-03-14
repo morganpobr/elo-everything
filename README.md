@@ -10,6 +10,7 @@ A Python-based ELO rating system for processing competition results and maintain
 - Track player competition history
 - Calculate ELO rating changes using the standard chess ELO formula
 - Support ties and draws in both leaderboard and direct match formats
+- Recalculate ratings for past competitions, even when submitted out of order
 
 ## Project Structure
 
@@ -55,6 +56,18 @@ golf_ratings = player_manager.get_rating_list("golf")
 for player, rating in golf_ratings:
     print(f"{player}: {rating}")
 ```
+
+## Running the Project Interface Locally
+
+To run the project interface locally, follow these steps:
+
+1. Ensure you have Python installed on your machine.
+2. Navigate to the project directory.
+3. Run the application using the following command:
+   ```bash
+   python app.py
+   ```
+4. Open your web browser and go to the URL provided by the server to access the UI.
 
 ## Installation
 
