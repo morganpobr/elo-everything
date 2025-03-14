@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}Ratings{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col">
+        <h1>ELO Ratings</h1>
+        <p class="lead">Current ratings for all competition types</p>
+    </div>
+    <div class="col-auto">
+        <a href="{{ url_for('submit_competition') }}" class="btn btn-primary me-2">
+            <i class="bi bi-plus-circle"></i> Submit Competition
+        </a>
+        <button type="button" class="btn btn-secondary" id="reprocessAll">
+            <i class="bi bi-arrow-repeat"></i> Reprocess All
+        </button>
+    </div>
+</div>
+
+<!-- Competition Type Tabs -->
+<ul class="nav nav-tabs mb-4" id="ratingTabs" role="tablist">
+    {% for competition_type in competition_types %}
+    <li class="nav-item" role="presentation">
+        <button class="nav-link {% if loop.first %}active{% endif %}" 
+                id="tab-{{ competition_type }}" 
+                data-bs-toggle="tab"
+                data-bs-target="#content-{{ competition_type }}"
+                type="button"
+                role="tab">
+            {{ competition_type|title }}
+            <button class="btn btn-sm btn-link text-muted reprocess-type" 
+                    data-type="{{ competition_type }}"
+                    title="Reprocess {{ competition_type }} competitions">
+                <i class="bi bi-arrow-repeat"></i>
+            </button>
+        </button>
+    </li>
+    {% endfor %}
+</ul>
+
+<!-- Tab Content -->
+<div class="tab-content">
+    {% for competition_type in competition_types %}
+    <div class="tab-pane fade {% if loop.first %}show active{% endif %}" 
+         id="content-{{ competition_type }}" 
+         role="tabpanel">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Rating</th>
+                        <th>Rating Change</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for player_name, current_rating in ratings_by_type[competition_type] %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ player_name }}</td>
+                        <td>{{ current_rating }}</td>
+                        <td>
+                            {% set history = player_history(player_name, competition_type) %}
+                            {% if history %}
+                                {% set prev_rating = history[-1]['new_rating'] if history|length > 0 else current_rating %}
+                                {% set change = current_rating - prev_rating %}
+                                <span class="{% if change > 0 %}text-success{% elif change < 0 %}text-danger{% endif %}">
+                                    {% if change > 0 %}+{% endif %}{{ change }}
+                                </span>
+                            {% else %}
+                                <span class="text-muted">New</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% else %}
+    <div class="alert alert-info">
+        No competitions have been submitted yet. <a href="{{ url_for('submit_competition') }}">Submit your first competition!</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    function reprocessCompetitions(type = null) {
+        const data = type ? { competition_type: type } : {};
+        fetch('/reprocess', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.reload();
+            } else {
+                alert('Error: ' + data.message);
+            }
+        })
+        .catch(error => {
+            alert('Error reprocessing competitions: ' + error);
+        });
+    }
+
+    // Reprocess all competitions
+    document.getElementById('reprocessAll').addEventListener('click', function() {
+        if (confirm('This will reprocess ALL competitions for ALL types. Continue?')) {
+            reprocessCompetitions();
+        }
+    });
+
+    // Reprocess specific competition type
+    document.querySelectorAll('.reprocess-type').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.stopPropagation();  // Don't trigger tab switch
+            const type = this.dataset.type;
+            if (confirm(`Reprocess all ${type} competitions?`)) {
+                reprocessCompetitions(type);
+            }
+        });
+    });
+});
+</script>
+
+<style>
+.nav-link {
+    position: relative;
+    padding-right: 2.5rem;
+}
+.reprocess-type {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    opacity: 0.5;
+}
+.reprocess-type:hover {
+    opacity: 1;
+}
+.nav-link:not(.active) .reprocess-type {
+    display: none;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+
+{% block title %}Submit Competition{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col">
+        <h1>Submit Competition</h1>
+        <p class="lead">Enter competition details and results</p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <form id="competitionForm">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Competition Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date" required>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Competition Type</label>
+                    <input type="text" class="form-control" id="competition_type" 
+                           list="competition_types" required>
+                    <datalist id="competition_types">
+                        <option value="golf">
+                        <option value="chess">
+                        <option value="soccer">
+                        <option value="tennis">
+                    </datalist>
+                    <small class="text-muted">e.g., golf, chess, soccer</small>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Format Type</label>
+                    <select class="form-select" id="format_type" required>
+                        <option value="leaderboard">Leaderboard (Rankings)</option>
+                        <option value="direct_matches">Direct Matches</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Leaderboard Format -->
+            <div id="leaderboardSection">
+                <h3 class="h5 mb-3">Player Results</h3>
+                <div id="leaderboardResults">
+                    <div class="row mb-2 result-row">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control player-name" 
+                                   placeholder="Player Name" list="playerList">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" class="form-control rank" 
+                                   placeholder="Rank" min="1">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" class="form-control score" 
+                                   placeholder="Score (optional)" step="any">
+                        </div>
+                        <div class="col-md-2">
+                            <button type="button" class="btn btn-danger remove-row">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary mt-2" id="addLeaderboardRow">
+                    <i class="bi bi-plus"></i> Add Player
+                </button>
+            </div>
+
+            <!-- Direct Matches Format -->
+            <div id="matchesSection" style="display: none;">
+                <h3 class="h5 mb-3">Match Results</h3>
+                <div id="matchResults">
+                    <div class="row mb-2 match-row">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control player-a" 
+                                   placeholder="Player A" list="playerList">
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-control result">
+                                <option value="1">Won</option>
+                                <option value="0.5">Draw</option>
+                                <option value="0">Lost</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control player-b" 
+                                   placeholder="Player B" list="playerList">
+                        </div>
+                        <div class="col-md-2">
+                            <button type="button" class="btn btn-danger remove-row">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary mt-2" id="addMatchRow">
+                    <i class="bi bi-plus"></i> Add Match
+                </button>
+            </div>
+
+            <datalist id="playerList">
+                <!-- Will be populated dynamically -->
+            </datalist>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary">Submit Competition</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('competitionForm');
+    const formatType = document.getElementById('format_type');
+    const leaderboardSection = document.getElementById('leaderboardSection');
+    const matchesSection = document.getElementById('matchesSection');
+    const competitionType = document.getElementById('competition_type');
+    const playerList = document.getElementById('playerList');
+
+    // Show/hide appropriate section based on format type
+    formatType.addEventListener('change', function() {
+        if (this.value === 'leaderboard') {
+            leaderboardSection.style.display = 'block';
+            matchesSection.style.display = 'none';
+        } else {
+            leaderboardSection.style.display = 'none';
+            matchesSection.style.display = 'block';
+        }
+    });
+
+    // Update player list when competition type changes
+    competitionType.addEventListener('change', function() {
+        fetch(`/api/players/${this.value}`)
+            .then(response => response.json())
+            .then(players => {
+                playerList.innerHTML = '';
+                players.forEach(player => {
+                    const option = document.createElement('option');
+                    option.value = player.name;
+                    playerList.appendChild(option);
+                });
+            });
+    });
+
+    // Add new leaderboard row
+    document.getElementById('addLeaderboardRow').addEventListener('click', function() {
+        const template = document.querySelector('.result-row').cloneNode(true);
+        template.querySelector('.player-name').value = '';
+        template.querySelector('.rank').value = '';
+        template.querySelector('.score').value = '';
+        document.getElementById('leaderboardResults').appendChild(template);
+    });
+
+    // Add new match row
+    document.getElementById('addMatchRow').addEventListener('click', function() {
+        const template = document.querySelector('.match-row').cloneNode(true);
+        template.querySelector('.player-a').value = '';
+        template.querySelector('.player-b').value = '';
+        template.querySelector('.result').value = '1';
+        document.getElementById('matchResults').appendChild(template);
+    });
+
+    // Remove row
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('remove-row') || 
+            e.target.parentElement.classList.contains('remove-row')) {
+            const row = e.target.closest('.row');
+            if (row.parentElement.children.length > 1) {
+                row.remove();
+            }
+        }
+    });
+
+    // Form submission
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const data = {
+            name: document.getElementById('name').value,
+            date: document.getElementById('date').value,
+            competition_type: document.getElementById('competition_type').value,
+            format_type: formatType.value
+        };
+
+        if (formatType.value === 'leaderboard') {
+            data.results = Array.from(document.querySelectorAll('.result-row')).map(row => ({
+                player: row.querySelector('.player-name').value,
+                rank: parseInt(row.querySelector('.rank').value),
+                score: row.querySelector('.score').value || null
+            }));
+        } else {
+            data.matches = Array.from(document.querySelectorAll('.match-row')).map(row => ({
+                player_a: row.querySelector('.player-a').value,
+                player_b: row.querySelector('.player-b').value,
+                result: row.querySelector('.result').value
+            }));
+        }
+
+        fetch('/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.href = '/';
+            } else {
+                alert('Error: ' + data.message);
+            }
+        })
+        .catch(error => {
+            alert('Error submitting competition: ' + error);
+        });
+    });
+});
+</script>
+{% endblock %}

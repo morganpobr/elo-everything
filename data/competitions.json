@@ -1,0 +1,157 @@
+[
+  {
+    "competition_id": "golf_march_madness_golf_2025_2025-03-13",
+    "name": "March Madness Golf 2025",
+    "date": "2025-03-13",
+    "competition_type": "golf",
+    "format_type": "leaderboard",
+    "results": [
+      {
+        "player_name": "Tiger Woods",
+        "rank": 1,
+        "score": 68
+      },
+      {
+        "player_name": "Rory McIlroy",
+        "rank": 2,
+        "score": 69
+      },
+      {
+        "player_name": "Jordan Spieth",
+        "rank": 2,
+        "score": 69
+      },
+      {
+        "player_name": "Dustin Johnson",
+        "rank": 4,
+        "score": 70
+      },
+      {
+        "player_name": "Brooks Koepka",
+        "rank": 5,
+        "score": 72
+      }
+    ],
+    "processed": true
+  },
+  {
+    "competition_id": "chess_spring_chess_classic_2025_2025-03-13",
+    "name": "Spring Chess Classic 2025",
+    "date": "2025-03-13",
+    "competition_type": "chess",
+    "format_type": "direct_matches",
+    "results": [
+      {
+        "player_a": "Magnus Carlsen",
+        "player_b": "Hikaru Nakamura",
+        "result": 1
+      },
+      {
+        "player_a": "Fabiano Caruana",
+        "player_b": "Wesley So",
+        "result": 0.5
+      },
+      {
+        "player_a": "Magnus Carlsen",
+        "player_b": "Wesley So",
+        "result": 1
+      },
+      {
+        "player_a": "Hikaru Nakamura",
+        "player_b": "Fabiano Caruana",
+        "result": 0.5
+      }
+    ],
+    "processed": true
+  },
+  {
+    "competition_id": "golf_after_march_madness_golf_2025_2025-03-20",
+    "name": "After March Madness Golf 2025",
+    "date": "2025-03-20",
+    "competition_type": "golf",
+    "format_type": "leaderboard",
+    "results": [
+      {
+        "player_name": "Tiger Woods",
+        "rank": 1,
+        "score": 68
+      },
+      {
+        "player_name": "Rory McIlroy",
+        "rank": 2,
+        "score": 69
+      },
+      {
+        "player_name": "Jordan Spieth",
+        "rank": 2,
+        "score": 69
+      },
+      {
+        "player_name": "Dustin Johnson",
+        "rank": 4,
+        "score": 70
+      },
+      {
+        "player_name": "Brooks Koepka",
+        "rank": 5,
+        "score": 72
+      },
+      {
+        "player_name": "Morgan O'Brien",
+        "rank": 6,
+        "score": 78
+      }
+    ],
+    "processed": true
+  },
+  {
+    "competition_id": "amateur_golf_erie_beach_classic_2025-03-23",
+    "name": "erie beach classic",
+    "date": "2025-03-23",
+    "competition_type": "amateur_golf",
+    "format_type": "leaderboard",
+    "results": [
+      {
+        "player_name": "Morgan O'Brien",
+        "rank": 2,
+        "score": 85.0
+      },
+      {
+        "player_name": "Owen Dorssers",
+        "rank": 1,
+        "score": 76.0
+      },
+      {
+        "player_name": "Finley O'Brien",
+        "rank": 3,
+        "score": 86.0
+      }
+    ],
+    "processed": true
+  },
+  {
+    "competition_id": "amateur_golf_erie_beach_classic_2_2025-03-20",
+    "name": "erie beach classic 2",
+    "date": "2025-03-20",
+    "competition_type": "amateur_golf",
+    "format_type": "leaderboard",
+    "results": [
+      {
+        "player_name": "Owen Dorssers",
+        "rank": 1,
+        "score": null
+      },
+      {
+        "player_name": "Morgan O'Brien",
+        "rank": 3,
+        "score": null
+      },
+      {
+        "player_name": "Finley O'Brien",
+        "rank": 2,
+        "score": null
+      }
+    ],
+    "processed": true
+  }
+]
